@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import { AppProvider } from "@toolpad/core";
+import DashboardLayoutBranding from "./dashboard/page";
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <DashboardLayoutBranding>{children}</DashboardLayoutBranding>
+        </AppProvider>
       </body>
     </html>
   );
